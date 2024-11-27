@@ -1,14 +1,17 @@
 FROM ubuntu:latest
 
-# システムの更新と必要な依存関係のインストール
-RUN apt-get update && apt-get install -y \
+# システムの更新
+RUN apt-get update 
+
+# 必要な依存関係のインストール
+RUN apt-get install -y \
     git \
     wget \
     unzip \
     xz-utils \
     libglu1-mesa \
-    cmake \  # CMakeを追加
-    build-essential  # C/C++のビルドツールも追加すると良いでしょう
+    cmake \
+    build-essential
 
 # Flutter SDK のダウンロードとインストール
 RUN wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.5-stable.tar.xz
