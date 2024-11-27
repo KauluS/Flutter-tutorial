@@ -1,5 +1,5 @@
 {
-    "name": "Flutter Development Environment",
+    "name": "Flutter Development",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -7,12 +7,11 @@
         "vscode": {
             "extensions": [
                 "dart-code.flutter",
-                "dart-code.dart-code",
-                "usernamehw.errorlens",
-                "ms-azuretools.vscode-docker"
+                "dart-code.dart-code"
             ]
         }
     },
-    "postCreateCommand": "bash .devcontainer/post-create.sh",
-    "remoteUser": "root"
+    "forwardPorts": [
+        8080
+    ]
 }
